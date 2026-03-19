@@ -69,7 +69,7 @@ class HelpGestureDetector:
             wrists_above_eyes = lw[1] < eye_y and rw[1] < eye_y
 
             # Condition B: wrists crossed in front of chest
-            wrists_crossed = lw[0] > rw[0]  # left_wrist X > right_wrist X
+            wrists_crossed = lw[0] < rw[0]  # left_wrist X < right_wrist X (when facing camera)
 
             gesture_active = wrists_above_eyes or wrists_crossed
 

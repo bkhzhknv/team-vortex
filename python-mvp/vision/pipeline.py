@@ -264,14 +264,11 @@ class VisionPipeline:
 
         extra_signals = self.registry.detect(rendered, observations)
         for signal in extra_signals:
-            gate_key = f"{self.args.source_id}:{signal.event_type}"
-
             if signal.severity == "critical":
                 has_critical = True
 
-            if not self.gate.check(gate_key, signal.confidence, now, severity=signal.severity):
-                continue
-
+            # High-level detectors use their own stateful time windows (e.g. 3s hold).
+            # We don't use self.gate for them to avoid suppressing single-frame emit events.
             alert_triggered = True
             preview_path = self.preview_dir / f"{uuid.uuid4().hex}.jpg"
             cv2.imwrite(str(preview_path), rendered)
