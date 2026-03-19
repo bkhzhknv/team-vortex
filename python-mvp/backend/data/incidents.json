@@ -3187,6 +3187,216 @@
         "hold_seconds": 3.1,
         "detector": "help_gesture"
       }
+    },
+    {
+      "incident_id": "5d026514025a40dc9983bd1f5d0b1300",
+      "incident_type": "help_gesture",
+      "severity": "medium",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T16:56:54Z",
+      "location_label": "Main Square",
+      "person_track_id": "2861",
+      "confidence": 0.75,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\6a6808e435fe4140841958652b9618fb.jpg",
+      "privacy_mode": "none",
+      "metadata": {
+        "track_id": "2861",
+        "hold_seconds": 3.2,
+        "detector": "help_gesture"
+      }
+    },
+    {
+      "incident_id": "a508fd7b57364467a4d31b95bf1fb999",
+      "incident_type": "help_gesture",
+      "severity": "medium",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T17:02:45Z",
+      "location_label": "Main Square",
+      "person_track_id": "3408",
+      "confidence": 0.75,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\1737e7cd6e8f49d2889d55df288d1022.jpg",
+      "privacy_mode": "none",
+      "metadata": {
+        "track_id": "3408",
+        "hold_seconds": 3.0,
+        "detector": "help_gesture"
+      }
+    },
+    {
+      "incident_id": "b9e3e7e63cc143b2a56ff3c28f1825ba",
+      "incident_type": "help_gesture",
+      "severity": "medium",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T17:07:12Z",
+      "location_label": "Main Square",
+      "person_track_id": "3563",
+      "confidence": 0.75,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\b1ca39ff587c43068f7b423e97ad58e1.jpg",
+      "privacy_mode": "none",
+      "metadata": {
+        "track_id": "3563",
+        "hold_seconds": 3.1,
+        "detector": "help_gesture"
+      }
+    },
+    {
+      "incident_id": "4cf742570ab843969c82612470e1b578",
+      "incident_type": "help_gesture",
+      "severity": "medium",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T17:09:35Z",
+      "location_label": "Main Square",
+      "person_track_id": "3608",
+      "confidence": 0.75,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\553bd04a1fa0493eafa5ff9c06d6df81.jpg",
+      "privacy_mode": "none",
+      "metadata": {
+        "track_id": "3608",
+        "hold_seconds": 3.2,
+        "detector": "help_gesture"
+      }
+    },
+    {
+      "incident_id": "4e7ec296e5d04e62943110993c1d8e80",
+      "incident_type": "help_gesture",
+      "severity": "medium",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T17:18:36Z",
+      "location_label": "Main Square",
+      "person_track_id": "3847",
+      "confidence": 0.75,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\3d6230c6a8f84815a2ae4a0dd24a2ee9.jpg",
+      "privacy_mode": "none",
+      "metadata": {
+        "track_id": "3847",
+        "hold_seconds": 3.1,
+        "detector": "help_gesture"
+      }
+    },
+    {
+      "incident_id": "36e377cafeef47e2bc77efa6e17e2942",
+      "incident_type": "help_gesture",
+      "severity": "medium",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T17:23:39Z",
+      "location_label": "Main Square",
+      "person_track_id": "3979",
+      "confidence": 0.75,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\4c551fc37ab64112bc4caea4a85166e6.jpg",
+      "privacy_mode": "none",
+      "metadata": {
+        "track_id": "3979",
+        "hold_seconds": 3.2,
+        "detector": "help_gesture"
+      }
+    },
+    {
+      "incident_id": "e1550099a2a34fba842ff4e946790c52",
+      "incident_type": "help_gesture",
+      "severity": "medium",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T17:28:56Z",
+      "location_label": "Main Square",
+      "person_track_id": "3893",
+      "confidence": 0.75,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\6682d3ffd7a347758293182d227f2eda.jpg",
+      "privacy_mode": "none",
+      "metadata": {
+        "track_id": "3893",
+        "hold_seconds": 3.1,
+        "detector": "help_gesture"
+      }
+    },
+    {
+      "incident_id": "c7de1d7c06df4014b7a8ce81ae9d216b",
+      "incident_type": "help_gesture",
+      "severity": "medium",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T17:40:41Z",
+      "location_label": "Main Square",
+      "person_track_id": "4162",
+      "confidence": 0.75,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\de61b96d0d7d41869bc39218eea8e949.jpg",
+      "privacy_mode": "none",
+      "metadata": {
+        "track_id": "4162",
+        "hold_seconds": 3.1,
+        "detector": "help_gesture"
+      }
+    },
+    {
+      "incident_id": "9d293243d66648779e57eae3df91e90d",
+      "incident_type": "help_gesture",
+      "severity": "medium",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T17:45:31Z",
+      "location_label": "Main Square",
+      "person_track_id": "4231",
+      "confidence": 0.75,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\b57cf75521dc4ff4b7a6b7fcad0fa379.jpg",
+      "privacy_mode": "none",
+      "metadata": {
+        "track_id": "4231",
+        "hold_seconds": 3.2,
+        "detector": "help_gesture"
+      }
+    },
+    {
+      "incident_id": "2892b6af67b1418e86c9c429e899c6f6",
+      "incident_type": "help_gesture",
+      "severity": "medium",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T17:48:58Z",
+      "location_label": "Main Square",
+      "person_track_id": "4388",
+      "confidence": 0.75,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\297e54b9b32e4e4fabeb314214270f9a.jpg",
+      "privacy_mode": "none",
+      "metadata": {
+        "track_id": "4388",
+        "hold_seconds": 3.2,
+        "detector": "help_gesture"
+      }
     }
   ],
   "responses": [
