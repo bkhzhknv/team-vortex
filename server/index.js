@@ -14,6 +14,64 @@ const io = new Server(server, {
 app.use(cors());
 app.use(express.json());
 
+const db = require('./db');
+
+app.post('/api/auth/login', (req, res) => {
+  const { username, password } = req.body;
+  if (!username || !password) return res.status(400).json({ error: 'Username and password required' });
+  const found = db.state.operators.find(o => o.username === username && o.password === password);
+  if (!found) return res.status(401).json({ error: 'Invalid credentials' });
+  const { password: _, ...safe } = found;
+  res.json({ token: Buffer.from(JSON.stringify(safe)).toString('base64'), user: safe });
+});
+
+app.get('/api/volunteers/stats', (req, res) => {
+  const all = volunteers.getAllVolunteers();
+  const available = all.filter(v => v.available === 1);
+  res.json({ total: all.length, available: available.length, onDuty: all.length - available.length });
+});
+
+app.post('/api/incident', (req, res) => {
+  const d = req.body;
+  if (!d.incident_type) return res.status(400).json({ error: 'incident_type required' });
+
+  const priorityMap = { critical: 'red', high: 'red', medium: 'yellow', low: 'yellow' };
+  const priority = priorityMap[d.severity] || 'yellow';
+  const camera = incidents.CAMERAS.find(c => c.id === d.source_id) || incidents.CAMERAS[0];
+
+  const newIncident = incidents.createManualIncident({
+    type: d.incident_type.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase()),
+    priority,
+    lat: camera.lat + (Math.random() - 0.5) * 0.001,
+    lng: camera.lng + (Math.random() - 0.5) * 0.001,
+    locationName: d.location_label || camera.name,
+    cameraId: d.source_id || camera.id,
+    heavyVolume: false,
+    requiredVolunteers: 1,
+  });
+
+  io.emit('incident:new', newIncident);
+
+  if (priority === 'red') {
+    const TELEGRAM_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
+    const TELEGRAM_CHAT = process.env.TELEGRAM_CHAT_ID;
+    if (TELEGRAM_TOKEN && TELEGRAM_CHAT && TELEGRAM_TOKEN !== 'YOUR_BOT_TOKEN_HERE') {
+      const msg = `🚨 *JYLDAM ALERT*\n\n🔴 *${newIncident.type}*\n📍 ${newIncident.locationName}\n⏱ ${new Date().toLocaleTimeString()}\n🆔 Camera: ${newIncident.cameraId}\n\nConfidence: ${((d.confidence || 0) * 100).toFixed(0)}%`;
+      fetch(`https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ chat_id: TELEGRAM_CHAT, text: msg, parse_mode: 'Markdown' }),
+      }).catch(err => console.error('Telegram error:', err.message));
+    }
+
+    const nearby = volunteers.matchVolunteers(newIncident.lat, newIncident.lng, 500);
+    io.emit('volunteer:urgent_ping', { incident: newIncident, nearbyVolunteers: nearby });
+  }
+
+  console.log(`📹 [CAMERA ${priority.toUpperCase()}] ${newIncident.type} @ ${newIncident.locationName}`);
+  res.json(newIncident);
+});
+
 // ── REST API ────────────────────────────────────────────────
 
 // Get all active incidents

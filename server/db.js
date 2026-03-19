@@ -13,9 +13,15 @@ const volunteers = [
   { id: 'v12', name: 'Nursultan O.', avatarColor: '#0081CF', lat: 42.9005, lng: 71.376, available: 1 },
 ];
 
+const operators = [
+  { id: 'op1', username: 'admin', password: 'admin123', name: 'Admin Operator', role: 'admin' },
+  { id: 'op2', username: 'operator', password: 'jyldam2026', name: 'Dispatch Operator', role: 'operator' },
+];
+
 const state = {
   incidents: [],
   volunteers: volunteers.map((volunteer) => ({ ...volunteer })),
+  operators: operators.map((op) => ({ ...op })),
   assignments: [],
   nextAssignmentId: 1,
 };
@@ -220,6 +226,7 @@ function createStatement(sql) {
 }
 
 module.exports = {
+  state,
   prepare(sql) {
     return createStatement(sql);
   },
