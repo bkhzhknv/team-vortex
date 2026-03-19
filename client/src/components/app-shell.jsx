@@ -6,7 +6,7 @@ import {
   IconChevronRight,
   IconCommand,
   IconLayoutDashboard,
-  IconLifebuoy,
+  IconRocket,
   IconLogout2,
   IconMoon,
   IconRadar2,
@@ -109,11 +109,11 @@ export function AppShell() {
         )}>
           <div className="flex items-center gap-3 px-2 py-3">
             <div className="flex h-12 w-12 items-center justify-center rounded-3xl border border-sky-300/20 bg-sky-400/10 text-sky-200">
-              <IconLifebuoy size={22} />
+              <IconRocket size={22} />
             </div>
             <div>
               <div className="text-[11px] uppercase tracking-[0.24em] text-[color:var(--text-faint)]">Jyldam</div>
-              <div className="text-lg font-semibold tracking-[-0.03em] text-[color:var(--text-strong)]">Field Ops Admin</div>
+              <div className="text-lg font-semibold tracking-[-0.03em] text-[color:var(--text-strong)]">Acceleration Command</div>
             </div>
           </div>
 

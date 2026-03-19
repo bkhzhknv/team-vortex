@@ -2,6 +2,9 @@ const express = require('express');
 const http = require('http');
 const { Server } = require('socket.io');
 const cors = require('cors');
+const path = require('path');
+require('dotenv').config({ path: path.join(__dirname, '../python-mvp/.env') });
+
 const incidents = require('./incidents');
 const volunteers = require('./volunteers');
 
@@ -54,7 +57,7 @@ app.post('/api/incident', (req, res) => {
 
   if (priority === 'red') {
     const TELEGRAM_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
-    const TELEGRAM_CHAT = process.env.TELEGRAM_CHAT_ID;
+    const TELEGRAM_CHAT = process.env.TELEGRAM_CHAT_ID || process.env.VOLUNTEER_CHAT_ID;
     if (TELEGRAM_TOKEN && TELEGRAM_CHAT && TELEGRAM_TOKEN !== 'YOUR_BOT_TOKEN_HERE') {
       const msg = `🚨 *JYLDAM ALERT*\n\n🔴 *${newIncident.type}*\n📍 ${newIncident.locationName}\n⏱ ${new Date().toLocaleTimeString()}\n🆔 Camera: ${newIncident.cameraId}\n\nConfidence: ${((d.confidence || 0) * 100).toFixed(0)}%`;
       fetch(`https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`, {
@@ -152,7 +155,7 @@ app.post('/api/incidents/trigger', (req, res) => {
   if (newIncident.priority === 'red') {
     // ── TELEGRAM BOT INTEGRATION STUB ──
     const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN || 'YOUR_BOT_TOKEN_HERE';
-    const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID || 'JURY_CHAT_ID_HERE';
+    const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID || process.env.VOLUNTEER_CHAT_ID || 'JURY_CHAT_ID_HERE';
     console.log(`\n📱 [TELEGRAM ALERT] Sending message to Chat ID ${TELEGRAM_CHAT_ID}:`);
     console.log(`   "🚨 EMERGENCY: ${newIncident.type} at ${newIncident.locationName}!"\n`);
     // fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, { ... })

@@ -169,6 +169,15 @@ class VisionPipeline:
                         continue
                     obj_bbox = tuple(int(v) for v in ob.xyxy[0].tolist())
                     obj_conf = float(ob.conf[0].item()) if ob.conf is not None else 0.0
+                    
+                    # Get class name (e.g., 'knife', 'chair')
+                    cls_name = self.object_model.names.get(cls_id, f"obj_{cls_id}")
+                    
+                    # Draw a bounding box for the object so you can see it working
+                    cv2.rectangle(rendered, (obj_bbox[0], obj_bbox[1]), (obj_bbox[2], obj_bbox[3]), COLOR_YELLOW, 2)
+                    cv2.putText(rendered, f"{cls_name} {obj_conf:.2f}", (obj_bbox[0], max(15, obj_bbox[1] - 5)), 
+                                cv2.FONT_HERSHEY_SIMPLEX, 0.5, COLOR_YELLOW, 2)
+                                
                     observations.append({
                         "object_class_id": cls_id,
                         "bbox": obj_bbox,
@@ -229,10 +238,6 @@ class VisionPipeline:
 
             decision = self.fall_tracker.update(track_id, posture, now)
             if decision is None:
-                continue
-
-            gate_key = f"{self.args.source_id}:fall:{track_id}"
-            if not self.gate.check(gate_key, confidence, now, severity="high"):
                 continue
 
             alert_triggered = True

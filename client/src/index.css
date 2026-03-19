@@ -2,6 +2,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 
 :root {
+  --bg: #f8fafc;
+  --surface: rgba(255, 255, 255, 0.85);
+  --surface-raised: rgba(0, 0, 0, 0.025);
+  --surface-overlay: rgba(0, 0, 0, 0.045);
+  --text: #334155;
+  --text-strong: #0f172a;
+  --text-soft: #475569;
+  --text-muted: #64748b;
+  --text-faint: #94a3b8;
+  --line-soft: rgba(0, 0, 0, 0.06);
+  --line-strong: rgba(0, 0, 0, 0.15);
+  --accent: #2563eb;
+  --accent-strong: #1d4ed8;
+  --critical: #ef4444;
+  --critical-strong: #b91c1c;
+  --warning: #f59e0b;
+  --success: #10b981;
+  --ring: rgba(37, 99, 235, 0.25);
+  --panel-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  --font-sans: "Instrument Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+  color-scheme: light;
+}
+
+.dark {
   --bg: #091018;
   --surface: rgba(9, 16, 24, 0.78);
   --surface-raised: rgba(255, 255, 255, 0.03);
@@ -21,11 +46,6 @@
   --success: #33b285;
   --ring: rgba(93, 175, 255, 0.38);
   --panel-shadow: 0 26px 60px rgba(0, 0, 0, 0.28);
-  --font-sans: "Instrument Sans", sans-serif;
-  --font-mono: "IBM Plex Mono", monospace;
-}
-
-.dark {
   color-scheme: dark;
 }
 
@@ -45,7 +65,7 @@ body {
   font-family: var(--font-sans);
   background:
     radial-gradient(circle at top, rgba(74, 163, 255, 0.08), transparent 28%),
-    linear-gradient(180deg, #091018 0%, #0b121d 100%);
+    linear-gradient(180deg, var(--bg) 0%, var(--bg) 100%);
   color: var(--text);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
