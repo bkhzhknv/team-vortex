@@ -1,0 +1,49 @@
+
+.privacy-video {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  background: #0d1117;
+  overflow: hidden;
+}
+
+.privacy-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.privacy-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  background: rgba(0, 224, 158, 0.12);
+  border: 1px solid rgba(0, 224, 158, 0.3);
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--green);
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(6px);
+}
+
+.privacy-badge__dot {
+  font-size: 12px;
+}
+
+.privacy-tech {
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+  font-size: 9px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: 0.5px;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+}

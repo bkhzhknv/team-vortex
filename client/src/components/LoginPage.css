@@ -1,0 +1,120 @@
+.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: hsl(var(--background));
+  padding: 20px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 44px;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  box-shadow: var(--shadow-float);
+  animation: scaleIn 0.35s ease;
+}
+
+.login-brand {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.login-logo {
+  font-size: 36px;
+  color: hsl(var(--accent));
+  display: block;
+  animation: float 3s ease-in-out infinite;
+}
+
+.login-brand h1 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-top: 10px;
+  letter-spacing: -0.6px;
+  background: linear-gradient(135deg, hsl(var(--accent)), hsl(270 60% 60%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.login-brand p {
+  font-size: 13px;
+  color: hsl(var(--muted-foreground));
+  margin-top: 4px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.login-field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.login-field input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid hsl(var(--input));
+  border-radius: var(--radius);
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-size: 14px;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+.login-field input:focus {
+  outline: none;
+  border-color: hsl(var(--ring));
+  box-shadow: 0 0 0 4px hsl(var(--ring) / 0.1);
+}
+
+.login-error {
+  padding: 12px 16px;
+  background: hsl(var(--destructive) / 0.08);
+  color: hsl(var(--destructive));
+  border-radius: var(--radius);
+  font-size: 13px;
+  font-weight: 500;
+  animation: fadeIn 0.2s ease;
+}
+
+.login-btn {
+  padding: 12px 20px;
+  background: linear-gradient(135deg, hsl(var(--accent)), hsl(270 60% 55%));
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 16px hsl(var(--accent) / 0.3);
+}
+
+.login-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 24px hsl(var(--accent) / 0.4);
+}
+
+.login-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+.login-hint {
+  text-align: center;
+  font-size: 12px;
+  color: hsl(var(--muted-foreground));
+  margin-top: 24px;
+  font-family: var(--mono);
+}
