@@ -148,7 +148,10 @@ class VisionPipeline:
         if not pose_results:
             return frame, []
         result = pose_results[0]
-        rendered = frame.copy()
+        
+        # Plot the keypoint 'exoskeleton' directly from YOLO
+        rendered = result.plot(boxes=False, labels=False)
+        
         observations = []
         incidents: list[Incident] = []
         boxes = getattr(result, "boxes", None)
@@ -191,9 +194,6 @@ class VisionPipeline:
             posture = estimate_posture(bbox, named_keypoints, frame.shape[0])
 
             self.kp_history.update(track_id, now, named_keypoints)
-
-            box_color = COLOR_RED if posture == "laying" else COLOR_GREEN
-            cv2.rectangle(rendered, (bbox[0], bbox[1]), (bbox[2], bbox[3]), box_color, 3)
 
             dwell = self.fall_tracker.get_dwell_seconds(track_id, now)
             already_alerted = self.fall_tracker.is_alerted(track_id)
