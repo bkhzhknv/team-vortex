@@ -126,25 +126,7 @@ io.on('connection', (socket) => {
   });
 });
 
-// ── Start simulation ────────────────────────────────────────
-incidents.startSimulation((newIncident) => {
-  console.log(`🆕 [${newIncident.priority.toUpperCase()}] ${newIncident.type} @ ${newIncident.locationName}`);
 
-  // Broadcast to all clients
-  io.emit('incident:new', newIncident);
-
-  // For red incidents, also ping nearby volunteers
-  if (newIncident.priority === 'red') {
-    const nearby = volunteers.matchVolunteers(newIncident.lat, newIncident.lng, 100);
-    if (nearby.length > 0) {
-      io.emit('volunteer:urgent_ping', {
-        incident: newIncident,
-        nearbyVolunteers: nearby,
-      });
-      console.log(`  📢 Pinged ${nearby.length} volunteers within 100m`);
-    }
-  }
-});
 
 // ── Server start ────────────────────────────────────────────
 const PORT = process.env.PORT || 4000;
