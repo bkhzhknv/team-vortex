@@ -665,7 +665,7 @@
       "location_label": "Main Square",
       "person_track_id": "70",
       "confidence": 0.7471170425415039,
-      "status": "open",
+      "status": "resolved",
       "dwell_seconds": 10.003409147262573,
       "bbox": {
         "x1": 0,
@@ -705,7 +705,1196 @@
         "detector": "fall",
         "posture": "laying"
       }
+    },
+    {
+      "incident_id": "c5209ba7f0c44e398d5201df8ce5bf23",
+      "incident_type": "help_gesture",
+      "severity": "medium",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T14:23:39Z",
+      "location_label": "Main Square",
+      "person_track_id": "3",
+      "confidence": 0.75,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\3e63713fe9f5487fa882800022230095.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "track_id": "3",
+        "hold_seconds": 3.1,
+        "detector": "help_gesture"
+      }
+    },
+    {
+      "incident_id": "8ea4a52aa9884dbbb2abb898c6c69b2c",
+      "incident_type": "help_gesture",
+      "severity": "medium",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T14:23:50Z",
+      "location_label": "Main Square",
+      "person_track_id": "19",
+      "confidence": 0.75,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\0318649644e94b27aa0730c365412cf4.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "track_id": "19",
+        "hold_seconds": 3.1,
+        "detector": "help_gesture"
+      }
+    },
+    {
+      "incident_id": "21a27cfff18441ae8235e5421bcd247a",
+      "incident_type": "help_gesture",
+      "severity": "medium",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T14:23:50Z",
+      "location_label": "Main Square",
+      "person_track_id": "17",
+      "confidence": 0.75,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\cc3022e107274b4c871c21bf4450bf09.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "track_id": "17",
+        "hold_seconds": 3.1,
+        "detector": "help_gesture"
+      }
+    },
+    {
+      "incident_id": "e3ddb7f1af174cfaa5d24d5e492d4aa9",
+      "incident_type": "help_gesture",
+      "severity": "medium",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T14:23:52Z",
+      "location_label": "Main Square",
+      "person_track_id": "1",
+      "confidence": 0.75,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\cbbffe868d934110942523dbd4acbc5b.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "track_id": "1",
+        "hold_seconds": 3.1,
+        "detector": "help_gesture"
+      }
+    },
+    {
+      "incident_id": "576775df4bcf4486bd265ac25bcc92f5",
+      "incident_type": "stroke_disorientation",
+      "severity": "high",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T14:24:09Z",
+      "location_label": "Main Square",
+      "person_track_id": "3",
+      "confidence": 0.6,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\4ec1115987964eaba15fcb2002f9844c.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "track_id": "3",
+        "zigzag_variance": 107.2,
+        "posture": "laying",
+        "detector": "stroke"
+      }
+    },
+    {
+      "incident_id": "b7916e2f5b994c9cba3b3887bdf81966",
+      "incident_type": "stroke_disorientation",
+      "severity": "high",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T14:24:31Z",
+      "location_label": "Main Square",
+      "person_track_id": "37",
+      "confidence": 0.6,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\ae599939530b46f3a100ee8e667cfb17.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "track_id": "37",
+        "zigzag_variance": 89.3,
+        "posture": "laying",
+        "detector": "stroke"
+      }
+    },
+    {
+      "incident_id": "5f691a7d0629468794fc6468d357c317",
+      "incident_type": "stroke_disorientation",
+      "severity": "high",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T14:24:42Z",
+      "location_label": "Main Square",
+      "person_track_id": "38",
+      "confidence": 0.6,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\61c8cc44d5cf469a8b89f5916d6849b8.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "track_id": "38",
+        "zigzag_variance": 77.0,
+        "posture": "laying",
+        "detector": "stroke"
+      }
+    },
+    {
+      "incident_id": "d12c21599b5f494fb3e9beccba45d20f",
+      "incident_type": "stroke_disorientation",
+      "severity": "high",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T14:24:43Z",
+      "location_label": "Main Square",
+      "person_track_id": "53",
+      "confidence": 0.6,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\8d11c4d93fbf44889c6da25117a057e8.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "track_id": "53",
+        "zigzag_variance": 111.9,
+        "posture": "laying",
+        "detector": "stroke"
+      }
+    },
+    {
+      "incident_id": "49ecd89a20e84114b5ab074b9b3a8dac",
+      "incident_type": "chest_pain",
+      "severity": "high",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T14:26:22Z",
+      "location_label": "Main Square",
+      "person_track_id": "122",
+      "confidence": 0.7,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\014d4087ca6b4a90817f5aec6631f31a.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "track_id": "122",
+        "nose_vy": 668.1,
+        "detector": "chest_pain"
+      }
+    },
+    {
+      "incident_id": "aec61e118cb44901a1a719ed033f9bb6",
+      "incident_type": "help_gesture",
+      "severity": "medium",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T14:26:29Z",
+      "location_label": "Main Square",
+      "person_track_id": "82",
+      "confidence": 0.75,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\5687c38a0fe24f4d8f612167a69ec1be.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "track_id": "82",
+        "hold_seconds": 3.1,
+        "detector": "help_gesture"
+      }
+    },
+    {
+      "incident_id": "ad394679a7b4428dbe1009d3e79d7bc0",
+      "incident_type": "fall_detected",
+      "severity": "high",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T14:26:36Z",
+      "location_label": "Main Square",
+      "person_track_id": "122",
+      "confidence": 0.7001800537109375,
+      "status": "open",
+      "dwell_seconds": 10.079292058944702,
+      "bbox": {
+        "x1": 84,
+        "y1": 331,
+        "x2": 271,
+        "y2": 480
+      },
+      "keypoints_summary": {
+        "nose": [
+          0.0,
+          0.0
+        ],
+        "right_eye": [
+          0.0,
+          0.0
+        ],
+        "left_ear": [
+          0.0,
+          0.0
+        ],
+        "right_ear": [
+          250.98,
+          379.55
+        ],
+        "left_shoulder": [
+          148.53,
+          418.94
+        ],
+        "right_shoulder": [
+          242.72,
+          430.17
+        ]
+      },
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\493d86db838a49188135163f19d2c451.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "detector": "fall",
+        "posture": "laying"
+      }
+    },
+    {
+      "incident_id": "5b3c0976c3cd4be6b94ef09b939220e3",
+      "incident_type": "stroke_disorientation",
+      "severity": "high",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T14:27:11Z",
+      "location_label": "Main Square",
+      "person_track_id": "181",
+      "confidence": 0.6,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\b8d8cbc6450b4e0b9d9009122333b996.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "track_id": "181",
+        "zigzag_variance": 127.9,
+        "posture": "laying",
+        "detector": "stroke"
+      }
+    },
+    {
+      "incident_id": "f9ff02e93d09404890b95889331c012c",
+      "incident_type": "stroke_disorientation",
+      "severity": "high",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T14:27:16Z",
+      "location_label": "Main Square",
+      "person_track_id": "186",
+      "confidence": 0.6,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\037a5faec8bf4fd987106d788535c30a.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "track_id": "186",
+        "zigzag_variance": 92.3,
+        "posture": "laying",
+        "detector": "stroke"
+      }
+    },
+    {
+      "incident_id": "9cb81decc0cb47d19ca07b5a2595086a",
+      "incident_type": "fall_detected",
+      "severity": "high",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T14:27:26Z",
+      "location_label": "Main Square",
+      "person_track_id": "193",
+      "confidence": 0.8003053069114685,
+      "status": "open",
+      "dwell_seconds": 10.043501377105713,
+      "bbox": {
+        "x1": 87,
+        "y1": 327,
+        "x2": 272,
+        "y2": 480
+      },
+      "keypoints_summary": {
+        "nose": [
+          0.0,
+          0.0
+        ],
+        "right_eye": [
+          259.15,
+          380.29
+        ],
+        "left_ear": [
+          0.0,
+          0.0
+        ],
+        "right_ear": [
+          249.02,
+          375.92
+        ],
+        "left_shoulder": [
+          158.05,
+          400.94
+        ],
+        "right_shoulder": [
+          236.83,
+          420.75
+        ]
+      },
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\2ce97783a3bb4d228e49fd29c068720e.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "detector": "fall",
+        "posture": "laying"
+      }
+    },
+    {
+      "incident_id": "10ad22abe7fc4b78947dbf9946ea5844",
+      "incident_type": "stroke_disorientation",
+      "severity": "high",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T14:27:31Z",
+      "location_label": "Main Square",
+      "person_track_id": "200",
+      "confidence": 0.6,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\0846aa90b7f14c61a4fc60757c8088d3.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "track_id": "200",
+        "zigzag_variance": 43.3,
+        "posture": "laying",
+        "detector": "stroke"
+      }
+    },
+    {
+      "incident_id": "ecf31326d02e42a7a3167e7bab2ae8ff",
+      "incident_type": "stroke_disorientation",
+      "severity": "high",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T14:28:00Z",
+      "location_label": "Main Square",
+      "person_track_id": "215",
+      "confidence": 0.6,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\b967dd2cd1ee42cbb8884a3c9a13c868.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "track_id": "215",
+        "zigzag_variance": 112.5,
+        "posture": "laying",
+        "detector": "stroke"
+      }
+    },
+    {
+      "incident_id": "67f179ed3d504bba91bb5d55c179af42",
+      "incident_type": "help_gesture",
+      "severity": "medium",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T14:28:14Z",
+      "location_label": "Main Square",
+      "person_track_id": "215",
+      "confidence": 0.75,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\cf341befe36e46a6bf0a91aa112cfe6e.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "track_id": "215",
+        "hold_seconds": 3.1,
+        "detector": "help_gesture"
+      }
+    },
+    {
+      "incident_id": "7eb6a209621f4b5e9cc81883a158303b",
+      "incident_type": "fall_detected",
+      "severity": "high",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T14:28:17Z",
+      "location_label": "Main Square",
+      "person_track_id": "82",
+      "confidence": 0.7233618497848511,
+      "status": "open",
+      "dwell_seconds": 10.073199987411499,
+      "bbox": {
+        "x1": 134,
+        "y1": 209,
+        "x2": 545,
+        "y2": 479
+      },
+      "keypoints_summary": {
+        "nose": [
+          268.78,
+          358.32
+        ],
+        "left_eye": [
+          296.48,
+          324.01
+        ],
+        "right_eye": [
+          248.48,
+          327.96
+        ],
+        "left_ear": [
+          358.59,
+          323.92
+        ],
+        "right_ear": [
+          0.0,
+          0.0
+        ],
+        "left_shoulder": [
+          437.03,
+          459.36
+        ],
+        "right_shoulder": [
+          212.08,
+          462.38
+        ]
+      },
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\46f9731d5c204bdf8ca60e50bea1d814.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "detector": "fall",
+        "posture": "laying"
+      }
+    },
+    {
+      "incident_id": "f5bc6d53dea3421a873269ee2e2f3f30",
+      "incident_type": "help_gesture",
+      "severity": "medium",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T14:28:36Z",
+      "location_label": "Main Square",
+      "person_track_id": "241",
+      "confidence": 0.75,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\01a01a02a7694ccfbe87d040615162a8.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "track_id": "241",
+        "hold_seconds": 3.1,
+        "detector": "help_gesture"
+      }
+    },
+    {
+      "incident_id": "c60ed91ba86d43699decca3bb3b1811b",
+      "incident_type": "stroke_disorientation",
+      "severity": "high",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T14:29:03Z",
+      "location_label": "Main Square",
+      "person_track_id": "241",
+      "confidence": 0.6,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\a8cb4d7eaeb344ebb2d09bb8e26e43a9.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "track_id": "241",
+        "zigzag_variance": 110.9,
+        "posture": "laying",
+        "detector": "stroke"
+      }
+    },
+    {
+      "incident_id": "fad7a5f4ffbb4b40b45c86bafdae6e0b",
+      "incident_type": "stroke_disorientation",
+      "severity": "high",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T14:29:30Z",
+      "location_label": "Main Square",
+      "person_track_id": "259",
+      "confidence": 0.6,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\c601ac24d78243b5b4c3cabe74253ad8.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "track_id": "259",
+        "zigzag_variance": 90.0,
+        "posture": "laying",
+        "detector": "stroke"
+      }
+    },
+    {
+      "incident_id": "3e635a81fef9458f8dd165209e19656b",
+      "incident_type": "help_gesture",
+      "severity": "medium",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T14:29:32Z",
+      "location_label": "Main Square",
+      "person_track_id": "259",
+      "confidence": 0.75,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\88264661bb5c4455a38f74d2e34e8e57.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "track_id": "259",
+        "hold_seconds": 3.4,
+        "detector": "help_gesture"
+      }
+    },
+    {
+      "incident_id": "ed7301d6aa3946c29960edddda36ae63",
+      "incident_type": "help_gesture",
+      "severity": "medium",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T14:30:05Z",
+      "location_label": "Main Square",
+      "person_track_id": "286",
+      "confidence": 0.75,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\d88fe79dbfb94704aa88b06bb04b3eb1.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "track_id": "286",
+        "hold_seconds": 3.2,
+        "detector": "help_gesture"
+      }
+    },
+    {
+      "incident_id": "bcd68bb4020f4da88c40c6fe988f9d35",
+      "incident_type": "stroke_disorientation",
+      "severity": "high",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T14:30:09Z",
+      "location_label": "Main Square",
+      "person_track_id": "286",
+      "confidence": 0.6,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\546e55d5063743f3a6fe57c9e9fa21f2.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "track_id": "286",
+        "zigzag_variance": 40.0,
+        "posture": "laying",
+        "detector": "stroke"
+      }
+    },
+    {
+      "incident_id": "d6d7cf140bd1436792afd25c685d670c",
+      "incident_type": "help_gesture",
+      "severity": "medium",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T14:30:16Z",
+      "location_label": "Main Square",
+      "person_track_id": "294",
+      "confidence": 0.75,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\6dcbbcd2825945da9d08ed60cb7bafa9.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "track_id": "294",
+        "hold_seconds": 3.2,
+        "detector": "help_gesture"
+      }
+    },
+    {
+      "incident_id": "aec94f829b0f432d9c90b084ec255514",
+      "incident_type": "help_gesture",
+      "severity": "medium",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T14:30:37Z",
+      "location_label": "Main Square",
+      "person_track_id": "302",
+      "confidence": 0.75,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\eea249dac22c4214a3bafc179648ee8e.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "track_id": "302",
+        "hold_seconds": 3.1,
+        "detector": "help_gesture"
+      }
+    },
+    {
+      "incident_id": "9cdb1748c5614c69badc2897dfc3cf45",
+      "incident_type": "stroke_disorientation",
+      "severity": "high",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T14:30:41Z",
+      "location_label": "Main Square",
+      "person_track_id": "304",
+      "confidence": 0.6,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\7957d33fcda24eefbacee7993a91e448.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "track_id": "304",
+        "zigzag_variance": 113.3,
+        "posture": "laying",
+        "detector": "stroke"
+      }
+    },
+    {
+      "incident_id": "07e214fa9b9e4dc6bfa08b891a4ff88b",
+      "incident_type": "stroke_disorientation",
+      "severity": "high",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T14:30:47Z",
+      "location_label": "Main Square",
+      "person_track_id": "312",
+      "confidence": 0.6,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\7ef40674021c4b7eb491edc51c7fac3e.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "track_id": "312",
+        "zigzag_variance": 39.8,
+        "posture": "laying",
+        "detector": "stroke"
+      }
+    },
+    {
+      "incident_id": "22c5e5107ce24e608d89406378eb7597",
+      "incident_type": "fall_detected",
+      "severity": "high",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T14:30:59Z",
+      "location_label": "Main Square",
+      "person_track_id": "287",
+      "confidence": 0.7319921255111694,
+      "status": "open",
+      "dwell_seconds": 10.228407859802246,
+      "bbox": {
+        "x1": 125,
+        "y1": 198,
+        "x2": 528,
+        "y2": 479
+      },
+      "keypoints_summary": {
+        "nose": [
+          306.07,
+          353.65
+        ],
+        "left_eye": [
+          331.97,
+          317.75
+        ],
+        "right_eye": [
+          277.48,
+          321.07
+        ],
+        "left_ear": [
+          371.66,
+          319.37
+        ],
+        "right_ear": [
+          245.06,
+          328.36
+        ],
+        "left_shoulder": [
+          447.06,
+          473.26
+        ],
+        "right_shoulder": [
+          189.56,
+          475.51
+        ]
+      },
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\521db329af484a5f843658a50860d519.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "detector": "fall",
+        "posture": "laying"
+      }
+    },
+    {
+      "incident_id": "884c79398e56477c9342d3274c1c536f",
+      "incident_type": "help_gesture",
+      "severity": "medium",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T14:31:00Z",
+      "location_label": "Main Square",
+      "person_track_id": "312",
+      "confidence": 0.75,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\35604b606e664f5584fefcfef2d11065.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "track_id": "312",
+        "hold_seconds": 3.0,
+        "detector": "help_gesture"
+      }
+    },
+    {
+      "incident_id": "2a68c25f43344862a02f27e21bbbbe13",
+      "incident_type": "help_gesture",
+      "severity": "medium",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T14:31:02Z",
+      "location_label": "Main Square",
+      "person_track_id": "306",
+      "confidence": 0.75,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\8f2cad44c7d846838aafc1ad3596171b.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "track_id": "306",
+        "hold_seconds": 3.2,
+        "detector": "help_gesture"
+      }
+    },
+    {
+      "incident_id": "318b397c23484cb3b96752c1f5deb265",
+      "incident_type": "help_gesture",
+      "severity": "medium",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T14:31:07Z",
+      "location_label": "Main Square",
+      "person_track_id": "318",
+      "confidence": 0.75,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\220106c51e904a5bbabf9c7ebca13735.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "track_id": "318",
+        "hold_seconds": 3.2,
+        "detector": "help_gesture"
+      }
+    },
+    {
+      "incident_id": "361420d3f6174dc2998cf91ad69399a8",
+      "incident_type": "stroke_disorientation",
+      "severity": "high",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T14:31:42Z",
+      "location_label": "Main Square",
+      "person_track_id": "337",
+      "confidence": 0.6,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\1462201a10a24444a8ed36f1bf087163.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "track_id": "337",
+        "zigzag_variance": 45.0,
+        "posture": "laying",
+        "detector": "stroke"
+      }
+    },
+    {
+      "incident_id": "390b887c2a234bf5952243fc54ab359f",
+      "incident_type": "stroke_disorientation",
+      "severity": "high",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T14:31:42Z",
+      "location_label": "Main Square",
+      "person_track_id": "327",
+      "confidence": 0.6,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\acf40e97967844d89aeb0280480b8810.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "track_id": "327",
+        "zigzag_variance": 107.2,
+        "posture": "laying",
+        "detector": "stroke"
+      }
+    },
+    {
+      "incident_id": "877964a92cc84b7f8d815a2f1f533ccb",
+      "incident_type": "fall_detected",
+      "severity": "high",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T14:31:52Z",
+      "location_label": "Main Square",
+      "person_track_id": "337",
+      "confidence": 0.4805384576320648,
+      "status": "open",
+      "dwell_seconds": 10.508150815963745,
+      "bbox": {
+        "x1": 507,
+        "y1": 379,
+        "x2": 573,
+        "y2": 479
+      },
+      "keypoints_summary": {
+        "nose": [
+          543.71,
+          400.53
+        ],
+        "left_eye": [
+          0.0,
+          0.0
+        ],
+        "right_eye": [
+          538.88,
+          397.36
+        ],
+        "right_ear": [
+          524.75,
+          401.83
+        ],
+        "left_shoulder": [
+          537.81,
+          425.07
+        ],
+        "right_shoulder": [
+          518.38,
+          428.15
+        ],
+        "left_elbow": [
+          0.0,
+          0.0
+        ],
+        "right_elbow": [
+          530.0,
+          461.69
+        ],
+        "right_wrist": [
+          551.93,
+          453.68
+        ],
+        "left_hip": [
+          0.0,
+          0.0
+        ],
+        "right_hip": [
+          0.0,
+          0.0
+        ]
+      },
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\c32887f62f8141d3bd409c76f9cb2564.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "detector": "fall",
+        "posture": "laying"
+      }
+    },
+    {
+      "incident_id": "ea26519dbb874b8da80af66d590c8603",
+      "incident_type": "help_gesture",
+      "severity": "medium",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T14:31:58Z",
+      "location_label": "Main Square",
+      "person_track_id": "193",
+      "confidence": 0.75,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\cec244247b0b41bcbdf87e2cbc29479b.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "track_id": "193",
+        "hold_seconds": 3.0,
+        "detector": "help_gesture"
+      }
+    },
+    {
+      "incident_id": "8a567f5a7e8c4d3389e85da17e426379",
+      "incident_type": "help_gesture",
+      "severity": "medium",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T14:32:04Z",
+      "location_label": "Main Square",
+      "person_track_id": "322",
+      "confidence": 0.75,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\b09ad1c81bed4457ba607b376a590fb8.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "track_id": "322",
+        "hold_seconds": 3.2,
+        "detector": "help_gesture"
+      }
+    },
+    {
+      "incident_id": "c1e5b3507987437ab0f34a17699248ce",
+      "incident_type": "help_gesture",
+      "severity": "medium",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T14:32:16Z",
+      "location_label": "Main Square",
+      "person_track_id": "327",
+      "confidence": 0.75,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\2a1e65bacb6e4ca9858c496da0b851c6.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "track_id": "327",
+        "hold_seconds": 3.2,
+        "detector": "help_gesture"
+      }
+    },
+    {
+      "incident_id": "2cdfedc399d44f5bafe56e1d8a90b1ea",
+      "incident_type": "stroke_disorientation",
+      "severity": "high",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T14:32:31Z",
+      "location_label": "Main Square",
+      "person_track_id": "353",
+      "confidence": 0.6,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\df147d4e5bc04401b52243e1567a4593.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "track_id": "353",
+        "zigzag_variance": 102.3,
+        "posture": "laying",
+        "detector": "stroke"
+      }
+    },
+    {
+      "incident_id": "8b5cc159a8d44aeaa2f8be1771235dff",
+      "incident_type": "help_gesture",
+      "severity": "medium",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T14:32:33Z",
+      "location_label": "Main Square",
+      "person_track_id": "353",
+      "confidence": 0.75,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\63e8d28c09ca4d5482d23d0a052335ec.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "track_id": "353",
+        "hold_seconds": 3.1,
+        "detector": "help_gesture"
+      }
+    },
+    {
+      "incident_id": "2b69da590a4f473588f63e067dc74321",
+      "incident_type": "stroke_disorientation",
+      "severity": "high",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T14:33:24Z",
+      "location_label": "Main Square",
+      "person_track_id": "361",
+      "confidence": 0.6,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\85401b3145ba4fb6896fde7bac9606d9.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "track_id": "361",
+        "zigzag_variance": 117.4,
+        "posture": "laying",
+        "detector": "stroke"
+      }
+    },
+    {
+      "incident_id": "88363d529a174675864b4a59bf25ff44",
+      "incident_type": "stroke_disorientation",
+      "severity": "high",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T14:33:24Z",
+      "location_label": "Main Square",
+      "person_track_id": "374",
+      "confidence": 0.6,
+      "status": "open",
+      "dwell_seconds": 0.0,
+      "bbox": {},
+      "keypoints_summary": {},
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\5af44e05a4754b2eade83f285c75bed2.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "track_id": "374",
+        "zigzag_variance": 107.9,
+        "posture": "laying",
+        "detector": "stroke"
+      }
+    },
+    {
+      "incident_id": "687573ff6eb44c088e0d9f7fd25dc55c",
+      "incident_type": "fall_detected",
+      "severity": "high",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T14:33:38Z",
+      "location_label": "Main Square",
+      "person_track_id": "327",
+      "confidence": 0.6217262148857117,
+      "status": "open",
+      "dwell_seconds": 12.257967948913574,
+      "bbox": {
+        "x1": 508,
+        "y1": 380,
+        "x2": 632,
+        "y2": 479
+      },
+      "keypoints_summary": {
+        "nose": [
+          537.61,
+          401.92
+        ],
+        "left_eye": [
+          537.66,
+          398.03
+        ],
+        "right_eye": [
+          533.28,
+          397.92
+        ],
+        "left_ear": [
+          0.0,
+          0.0
+        ],
+        "right_ear": [
+          524.21,
+          400.21
+        ],
+        "left_shoulder": [
+          541.99,
+          420.51
+        ],
+        "right_shoulder": [
+          519.24,
+          423.34
+        ],
+        "left_elbow": [
+          554.96,
+          442.06
+        ],
+        "right_elbow": [
+          532.1,
+          448.51
+        ],
+        "left_wrist": [
+          557.53,
+          430.21
+        ],
+        "right_wrist": [
+          552.73,
+          436.07
+        ],
+        "left_hip": [
+          560.78,
+          455.41
+        ],
+        "right_hip": [
+          546.91,
+          460.87
+        ],
+        "left_knee": [
+          608.3,
+          450.96
+        ],
+        "right_knee": [
+          597.95,
+          454.67
+        ],
+        "left_ankle": [
+          0.0,
+          0.0
+        ],
+        "right_ankle": [
+          0.0,
+          0.0
+        ]
+      },
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\8be1a9e378ea4702ac8dcf89d8b02157.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "detector": "fall",
+        "posture": "laying"
+      }
     }
   ],
-  "responses": []
+  "responses": [
+    {
+      "incident_id": "e0a9d6053e4649af99c1109bfb741b90",
+      "action": "accept",
+      "user_id": 6348666637,
+      "username": "strazxc",
+      "timestamp_utc": "2026-03-19T13:39:23Z"
+    },
+    {
+      "incident_id": "e0a9d6053e4649af99c1109bfb741b90",
+      "action": "enroute",
+      "user_id": 6348666637,
+      "username": "strazxc",
+      "timestamp_utc": "2026-03-19T13:39:26Z"
+    },
+    {
+      "incident_id": "e0a9d6053e4649af99c1109bfb741b90",
+      "action": "resolved",
+      "user_id": 6348666637,
+      "username": "strazxc",
+      "timestamp_utc": "2026-03-19T13:39:28Z"
+    }
+  ]
 }

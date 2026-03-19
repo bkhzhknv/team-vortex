@@ -14,16 +14,31 @@ from ultralytics import YOLO
 from shared.config import load_settings
 from shared.models import Incident, utc_now_iso
 from vision.detectors import DetectorRegistry
+from vision.emergency_detectors import (
+    ArmedAggressionDetector,
+    ChestPainDetector,
+    HelpGestureDetector,
+    StrokeDetector,
+)
 from vision.fall import FallTracker, estimate_posture
+from vision.keypoint_history import KeypointHistory
 from vision.privacy import blur_head_region
 
 # ── Color palette ──────────────────────────────────────────────────────
 COLOR_GREEN = (0, 220, 80)
 COLOR_RED = (0, 0, 240)
 COLOR_ORANGE = (0, 140, 255)
+COLOR_YELLOW = (0, 230, 255)
 COLOR_WHITE = (255, 255, 255)
 COLOR_BLACK = (0, 0, 0)
 COLOR_ALERT_BG = (0, 0, 180)
+
+SEVERITY_COLORS = {
+    "critical": (0, 0, 255),
+    "high": (0, 0, 220),
+    "medium": (0, 180, 255),
+    "low": (0, 200, 100),
+}
 
 
 @dataclass(slots=True)
@@ -32,6 +47,7 @@ class VisionArgs:
     source_id: str
     location_label: str
     model_name: str
+    object_model_name: str
     confidence_threshold: float
     dwell_threshold_seconds: float
 
@@ -40,11 +56,19 @@ class VisionPipeline:
     def __init__(self, args: VisionArgs):
         self.args = args
         self.settings = load_settings()
-        self.model = YOLO(args.model_name)
+        self.pose_model = YOLO(args.model_name)
+        self.object_model = YOLO(args.object_model_name)
         self.fall_tracker = FallTracker(args.dwell_threshold_seconds)
+        self.kp_history = KeypointHistory(max_len=90, stale_seconds=5.0)
         self.registry = DetectorRegistry()
         self.preview_dir = Path(__file__).resolve().parent / "artifacts"
         self.preview_dir.mkdir(parents=True, exist_ok=True)
+
+        # Register emergency detectors
+        self.registry.register(HelpGestureDetector(self.kp_history))
+        self.registry.register(ChestPainDetector(self.kp_history))
+        self.registry.register(ArmedAggressionDetector(self.kp_history))
+        self.registry.register(StrokeDetector(self.kp_history))
 
     def run(self) -> None:
         capture = cv2.VideoCapture(self._parse_source(self.args.source))
@@ -67,10 +91,19 @@ class VisionPipeline:
 
     def process_frame(self, frame):
         now = time()
-        results = self.model.track(frame, persist=True, verbose=False, classes=[0], conf=self.args.confidence_threshold)
-        if not results:
+
+        # ── Pose model (persons only) ─────────────────────────────────
+        pose_results = self.pose_model.track(
+            frame, persist=True, verbose=False, classes=[0],
+            conf=self.args.confidence_threshold,
+        )
+
+        # ── Object detection model (all COCO classes) ─────────────────
+        obj_results = self.object_model(frame, verbose=False, conf=0.35)
+
+        if not pose_results:
             return frame, []
-        result = results[0]
+        result = pose_results[0]
         rendered = frame.copy()
         observations = []
         incidents: list[Incident] = []
@@ -78,6 +111,24 @@ class VisionPipeline:
         keypoints = getattr(result, "keypoints", None)
         if boxes is None or keypoints is None:
             return rendered, incidents
+
+        # ── Add object detections to observations ─────────────────────
+        if obj_results:
+            obj_result = obj_results[0]
+            obj_boxes = getattr(obj_result, "boxes", None)
+            if obj_boxes is not None:
+                for ob in obj_boxes:
+                    cls_id = int(ob.cls[0].item()) if ob.cls is not None else -1
+                    if cls_id == 0:
+                        continue  # skip person class, handled by pose model
+                    obj_bbox = tuple(int(v) for v in ob.xyxy[0].tolist())
+                    obj_conf = float(ob.conf[0].item()) if ob.conf is not None else 0.0
+                    observations.append({
+                        "object_class_id": cls_id,
+                        "bbox": obj_bbox,
+                        "confidence": obj_conf,
+                        "track_id": None,
+                    })
 
         alert_triggered = False
 
@@ -94,13 +145,14 @@ class VisionPipeline:
                 confidence = float(confidence_tensor[0])
             named_keypoints = self._named_keypoints(keypoints, index)
             posture = estimate_posture(bbox, named_keypoints, frame.shape[0])
+
+            # Feed keypoint history
+            self.kp_history.update(track_id, now, named_keypoints)
+
             rendered = blur_head_region(rendered, bbox, named_keypoints)
 
             # ── Color-coded bounding box ──────────────────────────────
-            if posture == "laying":
-                box_color = COLOR_RED
-            else:
-                box_color = COLOR_GREEN
+            box_color = COLOR_RED if posture == "laying" else COLOR_GREEN
             cv2.rectangle(rendered, (bbox[0], bbox[1]), (bbox[2], bbox[3]), box_color, 3)
 
             # ── Large posture label ───────────────────────────────────
@@ -119,40 +171,22 @@ class VisionPipeline:
                 status_text = "STANDING"
                 label_color = COLOR_GREEN
 
-            # Draw label background for visibility
             label_y = max(35, bbox[1] - 15)
             (tw, th), _ = cv2.getTextSize(status_text, cv2.FONT_HERSHEY_SIMPLEX, 0.75, 2)
             cv2.rectangle(rendered, (bbox[0], label_y - th - 8), (bbox[0] + tw + 8, label_y + 4), COLOR_BLACK, -1)
-            cv2.putText(
-                rendered,
-                status_text,
-                (bbox[0] + 4, label_y),
-                cv2.FONT_HERSHEY_SIMPLEX,
-                0.75,
-                label_color,
-                2,
-            )
+            cv2.putText(rendered, status_text, (bbox[0] + 4, label_y),
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.75, label_color, 2)
 
-            # ── Track ID (smaller, below box) ────────────────────────
-            cv2.putText(
-                rendered,
-                f"ID:{track_id}  conf:{confidence:.2f}",
-                (bbox[0], bbox[3] + 20),
-                cv2.FONT_HERSHEY_SIMPLEX,
-                0.5,
-                COLOR_WHITE,
-                1,
-            )
+            cv2.putText(rendered, f"ID:{track_id}  conf:{confidence:.2f}",
+                        (bbox[0], bbox[3] + 20), cv2.FONT_HERSHEY_SIMPLEX, 0.5, COLOR_WHITE, 1)
 
-            observations.append(
-                {
-                    "track_id": track_id,
-                    "bbox": bbox,
-                    "keypoints": named_keypoints,
-                    "posture": posture,
-                    "confidence": confidence,
-                }
-            )
+            observations.append({
+                "track_id": track_id,
+                "bbox": bbox,
+                "keypoints": named_keypoints,
+                "posture": posture,
+                "confidence": confidence,
+            })
             decision = self.fall_tracker.update(track_id, posture, now)
             if decision is None:
                 continue
@@ -183,12 +217,12 @@ class VisionPipeline:
                 )
             )
 
-        # ── Top-of-frame alert banner ─────────────────────────────────
-        if alert_triggered:
-            self._draw_alert_banner(rendered)
-
+        # ── Emergency detector plugins ────────────────────────────────
         extra_signals = self.registry.detect(rendered, observations)
         for signal in extra_signals:
+            alert_triggered = True
+            preview_path = self.preview_dir / f"{uuid.uuid4().hex}.jpg"
+            cv2.imwrite(str(preview_path), rendered)
             incidents.append(
                 Incident(
                     incident_id=uuid.uuid4().hex,
@@ -197,27 +231,46 @@ class VisionPipeline:
                     source_id=self.args.source_id,
                     timestamp_utc=utc_now_iso(),
                     location_label=self.args.location_label,
-                    person_track_id="n/a",
+                    person_track_id=signal.metadata.get("track_id", "n/a"),
                     confidence=signal.confidence,
                     status="open",
                     dwell_seconds=0.0,
                     bbox={},
                     keypoints_summary={},
-                    frame_ref="",
+                    frame_ref=str(preview_path),
                     privacy_mode="head_blur",
                     metadata=signal.metadata | {"detector": signal.detector_name},
                 )
             )
+
+        # ── Top-of-frame alert banner ─────────────────────────────────
+        if alert_triggered:
+            self._draw_alert_banner(rendered, incidents)
+
+        # Cleanup stale tracks
+        self.kp_history.cleanup(now)
+
         return rendered, incidents
 
-    def _draw_alert_banner(self, frame: np.ndarray) -> None:
-        """Draw a prominent red alert banner at the top of the frame."""
+    def _draw_alert_banner(self, frame: np.ndarray, incidents: list[Incident]) -> None:
         h, w = frame.shape[:2]
         banner_h = 48
         overlay = frame.copy()
-        cv2.rectangle(overlay, (0, 0), (w, banner_h), COLOR_ALERT_BG, -1)
+        # Pick highest severity color
+        worst = "low"
+        for inc in incidents:
+            if inc.severity == "critical":
+                worst = "critical"
+                break
+            if inc.severity == "high":
+                worst = "high"
+            elif inc.severity == "medium" and worst == "low":
+                worst = "medium"
+        bg = SEVERITY_COLORS.get(worst, COLOR_ALERT_BG)
+        cv2.rectangle(overlay, (0, 0), (w, banner_h), bg, -1)
         cv2.addWeighted(overlay, 0.75, frame, 0.25, 0, frame)
-        alert_text = "ALERT: PERSON LAYING DOWN > 10s  -  REPORT SENT TO OPERATOR & TELEGRAM"
+        types = ", ".join(sorted({inc.incident_type.replace("_", " ").upper() for inc in incidents}))
+        alert_text = f"ALERT: {types}"
         (tw, _), _ = cv2.getTextSize(alert_text, cv2.FONT_HERSHEY_SIMPLEX, 0.65, 2)
         text_x = max(10, (w - tw) // 2)
         cv2.putText(frame, alert_text, (text_x, 32), cv2.FONT_HERSHEY_SIMPLEX, 0.65, COLOR_WHITE, 2)
@@ -234,23 +287,10 @@ class VisionPipeline:
 
     def _named_keypoints(self, keypoints, index: int) -> dict[str, tuple[float, float, float]]:
         names = [
-            "nose",
-            "left_eye",
-            "right_eye",
-            "left_ear",
-            "right_ear",
-            "left_shoulder",
-            "right_shoulder",
-            "left_elbow",
-            "right_elbow",
-            "left_wrist",
-            "right_wrist",
-            "left_hip",
-            "right_hip",
-            "left_knee",
-            "right_knee",
-            "left_ankle",
-            "right_ankle",
+            "nose", "left_eye", "right_eye", "left_ear", "right_ear",
+            "left_shoulder", "right_shoulder", "left_elbow", "right_elbow",
+            "left_wrist", "right_wrist", "left_hip", "right_hip",
+            "left_knee", "right_knee", "left_ankle", "right_ankle",
         ]
         xy_points = keypoints.xy[index].tolist()
         conf_points = keypoints.conf[index].tolist() if keypoints.conf is not None else [1.0] * len(xy_points)
@@ -271,6 +311,7 @@ def parse_args() -> VisionArgs:
     parser.add_argument("--source-id", required=True)
     parser.add_argument("--location-label", required=True)
     parser.add_argument("--model-name", default="yolov8n-pose.pt")
+    parser.add_argument("--object-model-name", default="yolov8n.pt")
     parser.add_argument("--confidence-threshold", type=float, default=0.35)
     parser.add_argument("--dwell-threshold-seconds", type=float, default=10.0)
     args = parser.parse_args()
@@ -279,6 +320,7 @@ def parse_args() -> VisionArgs:
         source_id=args.source_id,
         location_label=args.location_label,
         model_name=args.model_name,
+        object_model_name=args.object_model_name,
         confidence_threshold=args.confidence_threshold,
         dwell_threshold_seconds=args.dwell_threshold_seconds,
     )
