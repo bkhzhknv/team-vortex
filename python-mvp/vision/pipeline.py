@@ -15,6 +15,7 @@ from ultralytics import YOLO
 from shared.config import load_settings
 from shared.models import Incident, utc_now_iso
 from vision.detectors import DetectorRegistry
+from vision.earthquake_detector import EarthquakeDetector
 from vision.emergency_detectors import (
     ArmedAggressionDetector,
     ChestPainDetector,
@@ -114,6 +115,7 @@ class VisionPipeline:
         self.registry.register(ChestPainDetector(self.kp_history))
         self.registry.register(ArmedAggressionDetector(self.kp_history))
         self.registry.register(StrokeDetector(self.kp_history))
+        self.registry.register(EarthquakeDetector(self.kp_history))
 
     def run(self) -> None:
         capture = cv2.VideoCapture(self._parse_source(self.args.source))
