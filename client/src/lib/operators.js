@@ -1,0 +1,28 @@
+export const OPERATORS = [
+  {
+    id: 'op1',
+    username: 'admin',
+    name: 'Admin Operator',
+    role: 'admin',
+    shift: '06:00 - 14:00',
+    focus: 'City-wide command',
+    clearance: 'Full',
+    dispatchRate: 14,
+    incidentsHandled: 128,
+    qualityScore: 98,
+    lastActivity: 'Monitoring escalation flow',
+  },
+  {
+    id: 'op2',
+    username: 'operator',
+    name: 'Dispatch Operator',
+    role: 'operator',
+    shift: '14:00 - 22:00',
+    focus: 'Volunteer coordination',
+    clearance: 'Ops',
+    dispatchRate: 22,
+    incidentsHandled: 85,
+    qualityScore: 93,
+    lastActivity: 'Routing field volunteers',
+  },
+];
