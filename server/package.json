@@ -1,0 +1,17 @@
+{
+  "name": "jyldam-server",
+  "version": "1.0.0",
+  "description": "Jyldam Inclusive & Emergency Dispatch System - Backend",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.4",
+    "cors": "^2.8.5",
+    "uuid": "^9.0.0",
+    "better-sqlite3": "^11.0.0"
+  }
+}
