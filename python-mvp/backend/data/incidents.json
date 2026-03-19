@@ -1,0 +1,711 @@
+{
+  "incidents": [
+    {
+      "incident_id": "78b4bcaea3a946f98f0f72ccaa165845",
+      "incident_type": "fall_detected",
+      "severity": "high",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T12:59:52Z",
+      "location_label": "Main Square",
+      "person_track_id": "50",
+      "confidence": 0.6569350957870483,
+      "status": "open",
+      "dwell_seconds": 10.172221422195435,
+      "bbox": {
+        "x1": 462,
+        "y1": 387,
+        "x2": 620,
+        "y2": 473
+      },
+      "keypoints_summary": {
+        "left_ear": [
+          507.39,
+          406.7
+        ],
+        "right_ear": [
+          541.32,
+          402.97
+        ],
+        "left_shoulder": [
+          481.81,
+          424.65
+        ],
+        "right_shoulder": [
+          568.6,
+          420.79
+        ],
+        "left_elbow": [
+          0.0,
+          0.0
+        ],
+        "right_elbow": [
+          0.0,
+          0.0
+        ],
+        "right_wrist": [
+          0.0,
+          0.0
+        ],
+        "right_hip": [
+          0.0,
+          0.0
+        ]
+      },
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\ac3fc9d6042d4cd683537785ad84063a.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "detector": "fall",
+        "posture": "ground"
+      }
+    },
+    {
+      "incident_id": "83af5a6a54ed4e448bd3db117b2463bb",
+      "incident_type": "fall_detected",
+      "severity": "high",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T13:00:40Z",
+      "location_label": "Main Square",
+      "person_track_id": "74",
+      "confidence": 0.82416832447052,
+      "status": "open",
+      "dwell_seconds": 10.078762531280518,
+      "bbox": {
+        "x1": 468,
+        "y1": 377,
+        "x2": 598,
+        "y2": 465
+      },
+      "keypoints_summary": {
+        "left_ear": [
+          507.62,
+          404.95
+        ],
+        "right_ear": [
+          537.17,
+          402.48
+        ],
+        "left_shoulder": [
+          489.84,
+          435.37
+        ],
+        "right_shoulder": [
+          564.41,
+          430.15
+        ],
+        "left_elbow": [
+          0.0,
+          0.0
+        ],
+        "right_elbow": [
+          594.65,
+          458.95
+        ],
+        "left_hip": [
+          0.0,
+          0.0
+        ],
+        "right_hip": [
+          0.0,
+          0.0
+        ]
+      },
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\7e08e3a41560454c9d368287082a5951.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "detector": "fall",
+        "posture": "ground"
+      }
+    },
+    {
+      "incident_id": "6b35375ecd6c4af4a34628d432357e95",
+      "incident_type": "fall_detected",
+      "severity": "high",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T13:00:56Z",
+      "location_label": "Main Square",
+      "person_track_id": "102",
+      "confidence": 0.8304256796836853,
+      "status": "open",
+      "dwell_seconds": 10.059178352355957,
+      "bbox": {
+        "x1": 464,
+        "y1": 383,
+        "x2": 601,
+        "y2": 468
+      },
+      "keypoints_summary": {
+        "left_ear": [
+          509.91,
+          406.59
+        ],
+        "right_ear": [
+          537.66,
+          404.62
+        ],
+        "left_shoulder": [
+          489.03,
+          426.81
+        ],
+        "right_shoulder": [
+          564.64,
+          424.05
+        ],
+        "left_elbow": [
+          0.0,
+          0.0
+        ],
+        "right_elbow": [
+          0.0,
+          0.0
+        ],
+        "right_wrist": [
+          0.0,
+          0.0
+        ]
+      },
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\a4be8e010bb14cbdab6007a953526af8.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "detector": "fall",
+        "posture": "ground"
+      }
+    },
+    {
+      "incident_id": "e6e42b2becc24fd988381df5e2f74651",
+      "incident_type": "fall_detected",
+      "severity": "high",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T13:01:25Z",
+      "location_label": "Main Square",
+      "person_track_id": "118",
+      "confidence": 0.8862590193748474,
+      "status": "open",
+      "dwell_seconds": 10.051347255706787,
+      "bbox": {
+        "x1": 461,
+        "y1": 365,
+        "x2": 617,
+        "y2": 471
+      },
+      "keypoints_summary": {
+        "left_ear": [
+          517.73,
+          394.1
+        ],
+        "right_ear": [
+          551.71,
+          393.61
+        ],
+        "left_shoulder": [
+          494.44,
+          430.7
+        ],
+        "right_shoulder": [
+          576.2,
+          428.04
+        ],
+        "left_elbow": [
+          0.0,
+          0.0
+        ],
+        "right_elbow": [
+          0.0,
+          0.0
+        ]
+      },
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\611de19f10de417cb13e2866c9908398.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "detector": "fall",
+        "posture": "ground"
+      }
+    },
+    {
+      "incident_id": "4c84fda9a57b4737a84c6fcb9f2cccf8",
+      "incident_type": "fall_detected",
+      "severity": "high",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T13:03:45Z",
+      "location_label": "Main Square",
+      "person_track_id": "152",
+      "confidence": 0.37136462330818176,
+      "status": "open",
+      "dwell_seconds": 10.417367696762085,
+      "bbox": {
+        "x1": 466,
+        "y1": 373,
+        "x2": 618,
+        "y2": 473
+      },
+      "keypoints_summary": {
+        "nose": [
+          0.0,
+          0.0
+        ],
+        "left_ear": [
+          545.66,
+          402.35
+        ],
+        "right_ear": [
+          576.74,
+          405.78
+        ],
+        "left_shoulder": [
+          517.12,
+          427.9
+        ],
+        "right_shoulder": [
+          595.39,
+          437.69
+        ],
+        "left_elbow": [
+          483.69,
+          456.85
+        ],
+        "right_elbow": [
+          0.0,
+          0.0
+        ],
+        "left_wrist": [
+          0.0,
+          0.0
+        ],
+        "left_hip": [
+          0.0,
+          0.0
+        ]
+      },
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\a39ce50569084168a412695198eed50f.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "detector": "fall",
+        "posture": "ground"
+      }
+    },
+    {
+      "incident_id": "2be036660eca4faaab58c5652e137254",
+      "incident_type": "fall_detected",
+      "severity": "high",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T13:18:56Z",
+      "location_label": "Main Square",
+      "person_track_id": "351",
+      "confidence": 0.6364795565605164,
+      "status": "open",
+      "dwell_seconds": 10.12816309928894,
+      "bbox": {
+        "x1": 469,
+        "y1": 382,
+        "x2": 637,
+        "y2": 475
+      },
+      "keypoints_summary": {
+        "nose": [
+          0.0,
+          0.0
+        ],
+        "left_eye": [
+          0.0,
+          0.0
+        ],
+        "left_ear": [
+          523.62,
+          411.53
+        ],
+        "right_ear": [
+          0.0,
+          0.0
+        ],
+        "left_shoulder": [
+          515.22,
+          434.45
+        ],
+        "right_shoulder": [
+          577.27,
+          435.12
+        ],
+        "left_elbow": [
+          480.63,
+          453.21
+        ],
+        "right_elbow": [
+          0.0,
+          0.0
+        ],
+        "left_wrist": [
+          0.0,
+          0.0
+        ],
+        "left_hip": [
+          0.0,
+          0.0
+        ]
+      },
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\396a9ac115d043819ea32f03f0f33d1e.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "detector": "fall",
+        "posture": "ground"
+      }
+    },
+    {
+      "incident_id": "3cf9938f73d0425eadd5f53c275fffa4",
+      "incident_type": "fall_detected",
+      "severity": "high",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T13:22:15Z",
+      "location_label": "Main Square",
+      "person_track_id": "480",
+      "confidence": 0.7997599840164185,
+      "status": "open",
+      "dwell_seconds": 10.00922179222107,
+      "bbox": {
+        "x1": 79,
+        "y1": 230,
+        "x2": 566,
+        "y2": 479
+      },
+      "keypoints_summary": {
+        "nose": [
+          317.7,
+          377.57
+        ],
+        "left_eye": [
+          347.69,
+          345.73
+        ],
+        "right_eye": [
+          289.26,
+          346.98
+        ],
+        "left_ear": [
+          392.33,
+          357.97
+        ],
+        "right_ear": [
+          256.27,
+          361.14
+        ],
+        "left_shoulder": [
+          431.14,
+          480.0
+        ],
+        "right_shoulder": [
+          211.08,
+          480.0
+        ]
+      },
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\b73606a4520a4d71b013b7a6a48debc8.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "detector": "fall",
+        "posture": "ground"
+      }
+    },
+    {
+      "incident_id": "c95a93c4fd44490bb806e801167a9820",
+      "incident_type": "fall_detected",
+      "severity": "high",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T13:26:50Z",
+      "location_label": "Main Square",
+      "person_track_id": "2",
+      "confidence": 0.8486127257347107,
+      "status": "open",
+      "dwell_seconds": 10.034034967422485,
+      "bbox": {
+        "x1": 40,
+        "y1": 334,
+        "x2": 216,
+        "y2": 480
+      },
+      "keypoints_summary": {
+        "nose": [
+          0.0,
+          0.0
+        ],
+        "right_eye": [
+          200.64,
+          388.88
+        ],
+        "left_ear": [
+          141.72,
+          375.56
+        ],
+        "right_ear": [
+          191.34,
+          387.19
+        ],
+        "left_shoulder": [
+          89.4,
+          433.52
+        ],
+        "right_shoulder": [
+          184.56,
+          448.25
+        ]
+      },
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\dfe9199806294dd0899c2b37ff8b2a95.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "detector": "fall",
+        "posture": "laying"
+      }
+    },
+    {
+      "incident_id": "35410415a17a47f8b669cff483f890c4",
+      "incident_type": "fall_detected",
+      "severity": "high",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T13:27:12Z",
+      "location_label": "Main Square",
+      "person_track_id": "1",
+      "confidence": 0.6895474195480347,
+      "status": "open",
+      "dwell_seconds": 10.07051157951355,
+      "bbox": {
+        "x1": 1,
+        "y1": 228,
+        "x2": 476,
+        "y2": 479
+      },
+      "keypoints_summary": {
+        "nose": [
+          0.0,
+          0.0
+        ],
+        "left_eye": [
+          262.34,
+          479.04
+        ],
+        "right_eye": [
+          0.0,
+          0.0
+        ],
+        "left_ear": [
+          0.0,
+          0.0
+        ]
+      },
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\13c89b8782d64a17ad82f07010a62056.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "detector": "fall",
+        "posture": "laying"
+      }
+    },
+    {
+      "incident_id": "bab05eb51de245e491731078db5d414e",
+      "incident_type": "fall_detected",
+      "severity": "high",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T13:27:12Z",
+      "location_label": "Main Square",
+      "person_track_id": "18",
+      "confidence": 0.8048309087753296,
+      "status": "open",
+      "dwell_seconds": 10.07051157951355,
+      "bbox": {
+        "x1": 424,
+        "y1": 391,
+        "x2": 553,
+        "y2": 474
+      },
+      "keypoints_summary": {
+        "left_ear": [
+          478.67,
+          418.58
+        ],
+        "right_ear": [
+          509.09,
+          415.9
+        ],
+        "left_shoulder": [
+          460.82,
+          449.16
+        ],
+        "right_shoulder": [
+          533.43,
+          445.43
+        ],
+        "left_elbow": [
+          429.04,
+          465.94
+        ],
+        "right_elbow": [
+          0.0,
+          0.0
+        ],
+        "left_hip": [
+          0.0,
+          0.0
+        ],
+        "right_hip": [
+          0.0,
+          0.0
+        ]
+      },
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\d2e71a9ebb0d49c3b73f8483561d2b0b.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "detector": "fall",
+        "posture": "laying"
+      }
+    },
+    {
+      "incident_id": "78ac6fb8d8134f519dbf70d88c32b170",
+      "incident_type": "fall_detected",
+      "severity": "high",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T13:28:18Z",
+      "location_label": "Main Square",
+      "person_track_id": "30",
+      "confidence": 0.4729442298412323,
+      "status": "open",
+      "dwell_seconds": 10.483689069747925,
+      "bbox": {
+        "x1": 476,
+        "y1": 387,
+        "x2": 617,
+        "y2": 474
+      },
+      "keypoints_summary": {
+        "left_ear": [
+          547.7,
+          416.15
+        ],
+        "right_ear": [
+          577.12,
+          419.07
+        ],
+        "left_shoulder": [
+          521.96,
+          443.23
+        ],
+        "right_shoulder": [
+          597.38,
+          452.5
+        ],
+        "left_elbow": [
+          0.0,
+          0.0
+        ],
+        "right_elbow": [
+          0.0,
+          0.0
+        ]
+      },
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\e261e388e5fc4542b5b38af946586239.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "detector": "fall",
+        "posture": "laying"
+      }
+    },
+    {
+      "incident_id": "af766b51ab9143ea8ff07f24141959b2",
+      "incident_type": "fall_detected",
+      "severity": "high",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T13:28:52Z",
+      "location_label": "Main Square",
+      "person_track_id": "63",
+      "confidence": 0.8044903874397278,
+      "status": "open",
+      "dwell_seconds": 10.085072755813599,
+      "bbox": {
+        "x1": 49,
+        "y1": 182,
+        "x2": 610,
+        "y2": 480
+      },
+      "keypoints_summary": {
+        "nose": [
+          335.88,
+          387.17
+        ],
+        "left_eye": [
+          370.54,
+          343.73
+        ],
+        "right_eye": [
+          293.34,
+          345.75
+        ],
+        "left_ear": [
+          415.2,
+          351.03
+        ],
+        "right_ear": [
+          238.06,
+          358.48
+        ],
+        "left_shoulder": [
+          0.0,
+          0.0
+        ],
+        "right_shoulder": [
+          0.0,
+          0.0
+        ]
+      },
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\de4640370c044e2d8cf9497bc253519e.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "detector": "fall",
+        "posture": "laying"
+      }
+    },
+    {
+      "incident_id": "e0a9d6053e4649af99c1109bfb741b90",
+      "incident_type": "fall_detected",
+      "severity": "high",
+      "source_id": "camera-01",
+      "timestamp_utc": "2026-03-19T13:28:55Z",
+      "location_label": "Main Square",
+      "person_track_id": "70",
+      "confidence": 0.7471170425415039,
+      "status": "open",
+      "dwell_seconds": 10.003409147262573,
+      "bbox": {
+        "x1": 0,
+        "y1": 362,
+        "x2": 185,
+        "y2": 479
+      },
+      "keypoints_summary": {
+        "nose": [
+          0.0,
+          0.0
+        ],
+        "right_eye": [
+          139.56,
+          421.15
+        ],
+        "left_ear": [
+          0.0,
+          0.0
+        ],
+        "right_ear": [
+          131.06,
+          417.36
+        ],
+        "left_shoulder": [
+          25.93,
+          463.94
+        ],
+        "right_shoulder": [
+          125.26,
+          480.0
+        ]
+      },
+      "frame_ref": "C:\\Users\\LENOVO\\Downloads\\jyldam\\python-mvp\\vision\\artifacts\\bb3d0453a757458da40a64580b5f672e.jpg",
+      "privacy_mode": "head_blur",
+      "metadata": {
+        "detector": "fall",
+        "posture": "laying"
+      }
+    }
+  ],
+  "responses": []
+}

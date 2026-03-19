@@ -30,9 +30,11 @@ class TelegramPayloadTests(unittest.TestCase):
 
         message = build_alert_message(incident)
 
-        self.assertIn("fall_detected", message)
+        self.assertIn("Fall Detected", message)
         self.assertIn("Crosswalk A", message)
         self.assertIn("inc-1", message)
+        self.assertIn("🚨", message)
+        self.assertIn("12.0", message)
 
     def test_button_rows_and_callback_round_trip(self):
         rows = build_button_rows("inc-1")

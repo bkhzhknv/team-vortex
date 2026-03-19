@@ -1,0 +1,9 @@
+fastapi==0.115.12
+numpy==1.26.4; python_version < "3.13"
+numpy==2.1.1; python_version >= "3.13"
+opencv-python==4.11.0.86
+python-dotenv==1.0.1
+python-telegram-bot==21.10
+requests==2.32.3
+ultralytics==8.3.97
+uvicorn==0.34.0
